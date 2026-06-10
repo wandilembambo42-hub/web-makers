@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Makers | Professional Website Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #0d47a1;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #90caf9;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(13, 71, 161, 0.8),
+                        rgba(13, 71, 161, 0.8)),
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #42a5f5;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1e88e5;
+        }
+
+        section {
+            padding: 60px 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0d47a1;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #f4f4f4;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #0d47a1;
+        }
+
+        .about {
+            background: #e3f2fd;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #0d47a1;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #1565c0;
+        }
+
+        footer {
+            background: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Web Makers</h1>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>We Build Websites That Grow Your Business</h2>
+        <p>Professional web design, development, and digital solutions tailored to your needs.</p>
+
+        <a href="#contact" class="btn">Get Started</a>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services">
+            <div class="service-card">
+                <h3>Website Design</h3>
+                <p>Beautiful and responsive websites designed to impress your customers.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Custom-built websites using modern technologies and best practices.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>SEO Services</h3>
+                <p>Improve your visibility online and attract more potential clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Web Makers</h2>
+
+        <p>
+            At Web Makers, we help businesses establish a powerful online presence.
+            Our team is passionate about creating websites that are fast, modern,
+            and designed to achieve results.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+
+    <p>Email: wandilembambo42@gmail.com</p>
+        <p>&copy; 2026 Web Makers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            alert("Thank you for contacting Web Makers! We'll get back to you soon.");
+        }
+    </script>
+
+</body>
+</html>
